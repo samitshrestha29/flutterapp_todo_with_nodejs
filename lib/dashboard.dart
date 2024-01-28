@@ -62,9 +62,11 @@ class _DashboardState extends State<Dashboard> {
   void getTodoList(userId) async {
     var regBody = {"userId": userId};
 
-    var response = await http.post(Uri.parse(getToDoList),
-        headers: {"Content-Type": "application/json"},
-        body: jsonEncode(regBody));
+    var response = await http.get(
+      Uri.parse('$getToDoList?userId=$userId'),
+      headers: {"Content-Type": "application/json"},
+      // body: jsonEncode(regBody)
+    );
 
     var jsonResponse = jsonDecode(response.body);
     items = jsonResponse['success'];
