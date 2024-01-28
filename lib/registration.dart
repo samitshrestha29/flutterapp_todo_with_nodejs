@@ -68,7 +68,7 @@ class _RegistrationState extends State<Registration> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  CommonLogo(),
+                  const CommonLogo(),
                   const HeightBox(10),
                   "CREATE YOUR ACCOUNT".text.size(22).yellow100.make(),
                   TextField(

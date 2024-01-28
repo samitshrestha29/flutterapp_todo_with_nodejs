@@ -23,7 +23,6 @@ class _SignInPageState extends State<SignInPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initSharedPref();
   }
@@ -75,7 +74,7 @@ class _SignInPageState extends State<SignInPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  CommonLogo(),
+                  const CommonLogo(),
                   const HeightBox(10),
                   "Email Sign-In".text.size(22).yellow100.make(),
                   TextField(
@@ -121,7 +120,7 @@ class _SignInPageState extends State<SignInPage> {
         bottomNavigationBar: GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => Registration()));
+                MaterialPageRoute(builder: (context) => const Registration()));
           },
           child: Container(
               height: 25,
